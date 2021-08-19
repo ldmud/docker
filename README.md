@@ -24,7 +24,7 @@ Build the docker image (in this example the LP-245 mudlib)
 docker build -t lp245 docker/LP-245
 ```
 
-The image has no the name `lp245`.
+The image has now the name `lp245`.
 
 ### Use the image from docker hub
 
