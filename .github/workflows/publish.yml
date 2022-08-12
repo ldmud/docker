@@ -1,6 +1,9 @@
 name: Publish Docker image
 
-on: push
+on:
+  push:
+  schedule:
+    - cron: '15 5 * * 1'
 
 jobs:
   push_lp245_to_registry:
