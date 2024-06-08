@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends build-essential ca-certificates git bison autoconf autogen automake wget pkg-config libgcrypt20-dev libgnutls28-dev libsqlite3-dev python3-dev libxml2-dev zlib1g-dev libpcre3-dev libc-ares-dev python3-hunspell hunspell-de-de locales \
@@ -13,7 +13,7 @@ RUN apt-get update \
  && wget -O - https://www.unitopia.de/pub/UNItopia/muddocs.tar.gz | tar -zxf - \
  && wget -O - https://www.unitopia.de/pub/UNItopia/python-support.tar.gz | tar -zxf - \
  && apt-get clean \
- && apt-mark manual libgnutls30 libsqlite3-0 libpython3.9 libxml2 libpcre3 \
+ && apt-mark manual libgnutls30 libsqlite3-0 libpython3.11 libxml2 libpcre3 \
  && apt-get remove --purge -y build-essential ca-certificates git bison autoconf autogen automake wget pkg-config libgcrypt20-dev libgnutls28-dev libsqlite3-dev python3-dev libxml2-dev zlib1g-dev libpcre3-dev \
  && apt-get autoremove -y \
  && lib/doc/driver/setup_mudlib

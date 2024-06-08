@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends build-essential ca-certificates git bison autoconf autogen automake pkg-config libgcrypt20-dev libpcre3-dev \
